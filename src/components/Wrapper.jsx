@@ -10,6 +10,8 @@ function Wrapper() {
           .wrapper {
             display: grid;
             grid-template-columns: 5fr 5fr 5fr;
+            padding-left: 5%;
+            padding-right: 5%;
           }
 
         `}
