@@ -45,7 +45,11 @@ function ScheduleList() {
     <div>
       <style jsx>
         {`
+        .container {
+          padding-left: 28%;
+        }
           .list {
+            text-align: center;
             margin: 10px;
             padding: 15px;
             border: solid 1px;
@@ -62,19 +66,22 @@ function ScheduleList() {
           }
         `}
       </style>
-      <div className="list">
-        <h4 className="subTitle">Our Weekly Schedule</h4>
-        <hr />
-        {marketSchedule.map((place, index) => (
-          <Schedule
-            day={place.day}
-            location={place.location}
-            hours={place.hours}
-            booth={place.booth}
-            key={index}
-          />
-        ))}
+      <div className='container' >
+        <div className="list">
+          <h4 className="subTitle">Our Weekly Schedule</h4>
+          <hr />
+          {marketSchedule.map((place, index) => (
+            <Schedule
+              day={place.day}
+              location={place.location}
+              hours={place.hours}
+              booth={place.booth}
+              key={index}
+            />
+          ))}
+        </div>
       </div>
+      
     </div>
   );
 }

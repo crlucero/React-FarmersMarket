@@ -1,28 +1,25 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function ProducByMonth(props){
+function ProductByMonth(props){
     return (
-        <div>
-            <style jsx> {`
-            
-            `}
-            </style>
-            <div className='product'>
-                <p>Month: {props.month} </p>
-                <ul>
-                    {props.selection.map((x) =>
-                        <li>{x}</li>
-                    )}
-                </ul>
-            </div>
+      <div>
+        <style jsx> {``}</style>
+        <div className="product">
+          <p>Month: {props.month} </p>
+          <ul>
+            {props.selection.map(selection => (
+              <li style={{ listStyleType: "none" }}>{selection}</li>
+            ))}
+          </ul>
         </div>
-    )
+      </div>
+    );
 }
 
-export default ProducByMonth
+export default ProductByMonth;
 
-ProducByMonth.propTypes = {
+ProductByMonth.propTypes = {
     month: PropTypes.string,
     selection: PropTypes.array
-}
+};
